@@ -4,8 +4,20 @@
     <router-link to="/about">About</router-link>
   </nav>
   <router-view/>
-</template>
+  <snowVue/>
 
+</template>
+  <script>
+import snowVue from './components/snow.vue'
+  
+    export default{
+      
+      components:{
+        snowVue 
+      }
+    }
+
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
