@@ -1,0 +1,462 @@
+/* *{
+    margin: 0;
+}
+.attention{
+    color: white;
+    background-color:;
+}
+body{
+    background: #000;
+} */
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3.5rem;
+
+    /*========== Colors ==========*/
+    --primary-color:hsl(35, 100%, 50%);
+    --secondary-color:hsl(36, 100%, 97%);
+    --white-99:rgba(255, 249, 240, 1);
+    --white-95:hsl(240, 8%, 95%);
+    --title-color: hsl(250, 8%, 15%);
+    --text-color: hsl(250, 8%, 35%);
+    --body-color: hsl(240, 7%, 97%);
+    --container-color: #fff;
+    --shadow: hsla(0, 0%, 15%, .1);
+    --scroll-bar-color: hsl(250, 12%, 90%);
+    --scroll-thumb-color: hsl(250, 12%, 80%);
+
+    /*========== Font and typography ==========*/
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 4rem;
+    --bigger-font-size:2.75rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-bold: 600;
+
+    /*========== Margenes Bottom ==========*/
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+/* Responsive typography */
+@media screen and (max-width: 992px) {
+    :root {
+        --biggest-font-size: 2rem;
+        --bigger-font:1.75rem;
+        --h1-font-size: 1.5rem;
+        --h2-font-size: 1.25rem;
+        --h3-font-size: 1rem;
+        --normal-font-size: .938rem;
+        --small-font-size: .813rem;
+        --smaller-font-size: .75rem;
+    }
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+button,
+input {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4 {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+ul {
+    list-style: none;
+}
+li{
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+button,
+input {
+    border: none;
+    outline: none;
+}
+.button{
+    display: inline-block;
+    border-radius: .25rem;
+    padding: .5rem 2rem;
+    white-space: nowrap;
+}
+.btn__block{
+    display: block;
+    width: 100%;
+    border-radius: .25rem;
+    padding: .5rem 2rem;
+    white-space: nowrap;
+    background-color: var(--white-95);
+}
+.btn__primary{
+    background-color: var(--primary-color);
+    color: white;
+}
+.btn__secondary{
+    background-color: var(--body-color);
+    color: var(--title-color);
+}
+.btn__white{
+    background-color: var(--container-color);
+    color: var(--title-color);
+}
+.btn__99{
+    background-color: var(--white-99);
+    color: var(--title-color);
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.section {
+    padding: 5rem 0 2rem;
+}
+
+.section__title,
+.breadcrumb__title {
+    font-size: var(--h1-font-size);
+}
+
+.section__title,
+.breadcrumb__subtitle {
+    margin-bottom: var(--mb-3);
+}
+
+.section__title,
+.breadcrumb__title,
+.breadcrumb__subtitle {
+    text-align: center;
+}
+
+/*=============== LAYOUT ===============*/
+/* .container {
+    width: 100%;
+    max-width: 1200px;
+   margin: 0 auto;
+} */
+
+.grid {
+    display: grid;
+}
+.router__view{
+    background-color: var(--body-color);
+}
+/*============= My code starts============= */
+.attention{
+   color: white;
+   background-color: var(--primary-color);
+   padding: 10px;
+   width: 39.4cm;
+   margin-left: 20px;
+   margin-top: 10px;
+   text-align: center;
+   border-radius: 7.7px;
+}
+/* .nav-bar{
+  display: flex;  
+} */
+.container-1{
+    display: flex;  
+    gap: 3cm;
+    justify-content:space-around;
+    margin-top: 20px;
+}
+.sub-container-1{
+    display: flex;
+}
+.sub-container-1 img{
+    margin-right: 20px;
+    height: 90%;
+}
+.sub-container-1 ul{
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+.sub-container-2{
+    display: flex;
+    gap: 30px;
+}
+/* .sub-container-2 button{
+    display: inline-block;
+    border-radius: .25rem;
+    padding: .5px 2rem;
+    white-space: nowrap;
+} */
+ .container-2 ul{
+    display: none;
+ }
+ .container-2{
+    display: none;
+ }
+ .bod{
+   justify-content: center;
+   display: flex;
+ }
+ .bod button{
+    display: flex;
+    background-color:white;
+    padding: 5px 25px;
+    box-shadow: var(--shadow);
+    border-radius: 7.9px;
+    margin-top: 30px;
+    
+ }
+ .bod span{
+ color: var(--primary-color);
+ }
+ .bod h1{
+    /* margin-top: 4px; */
+    font-weight: 600;
+    
+ }
+ .bod img{
+    height: 40px;
+    margin-top: 5px;
+ }
+ .container-3{
+    text-align: center;
+    margin-top:10px ;
+ }
+ .container-3 p{
+    margin-top: 15px;
+ }
+ .container-3 button{
+    margin-top: 35px;
+    padding: 10px 9px;
+ }
+ .subcontainer-3{
+    display: flex;
+    gap: 9px;
+    justify-content: center;
+ }
+ .container-4{
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+    margin-top: 50px;
+ }
+ .ima{
+    background-color:white;
+    padding: 25px 45px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+ }
+ .imag{
+    background-color:white;
+    padding: 25px 25px;
+ }
+ .netflix{
+    background-color: white;
+    padding: 5px 4px;
+    height: 2.22cm; 
+    border-top-right-radius:20px;
+    border-bottom-right-radius: 20px;
+ }
+ .background-image{
+    height: 17cm;
+    width: 50cm;
+ }
+ .container-6{
+    margin-top: 3cm;
+ }
+ .container-6 h1{
+    margin-left: 15px;
+    font-family: sans-serif;
+    font-weight: 800;
+ }
+ .container-6 p{
+    color: rgba(41, 40, 40, 0.712);
+    font-family: sans-serif;
+ }
+ .mother{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 7cm;
+    margin-top: 20px;
+ }
+ .container-6 button{
+    background-color: white;
+    padding: 10px 25px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 3.4px;
+ }
+ .flex{
+    display: grid;
+    gap: 0.5cm;
+     grid-template-columns: repeat(3,1fr);
+     /* margin-top: 2cm; */
+     margin: 2cm 30px;
+ }
+ .flex h1{
+    display: flex;
+    justify-content: end;
+    font-weight: 800;
+    font-size:500% ;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ }
+ .snow{
+    background-color: white;
+    padding: 50px 34px;
+    border-radius: 11px;
+ }
+ .flex p{
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.551);
+ }
+ .icon{
+    display: flex;
+    justify-content: end;
+    margin-top: 2cm;
+    font-size:200%;
+    color: var(--primary-color);
+
+ }
+ .container-8 h1{
+    margin-left: 30px;
+    font-size: 300%;
+    font-weight: 800;
+ }
+ .c8-subcontainer-1{
+    margin-top: 10px;
+    display: flex;
+    margin-left: 30px;
+    gap:6cm;
+ }
+ .c8-subcontainer-1 button{
+    background-color: white;
+    padding: 5px 9px;
+    border-radius: 3.7px;
+ }
+/*============= MY code stops=============== */
+
+
+
+
+
+
+
+
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 1200px) {
+    /* .container{
+        max-width: 1100px;
+        margin: 0 auto;
+    } */
+     .attention{
+    width: auto;
+    margin-right: 7px;
+     }
+}
+
+@media screen and (max-width: 992px) {
+    /* .container {
+        max-width: 767px;
+        margin: 0 auto;
+    } */
+    .nav__menu{
+        display: none;
+    }
+    .attention{
+    width: auto;
+    margin-right: 7px;
+     }
+    .nav-bar{
+        width: auto;
+        margin: 0 40px;
+    }
+}
+
+/* For medium devices */
+@media screen and (max-width: 767px) {
+    /* .container{
+        max-width: 700px;
+        margin: 0 auto;
+    } */
+    .footer__container{
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
+    .benefit__details{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .grid{
+        grid-template-columns: 1fr;
+        /* row-gap: 1.5rem; */
+    }
+    /* .container{
+        max-width: 500px;
+        margin: 0 auto;
+    } */
+    .hero__heading{
+        font-size: var(--h2-font-size);
+    }
+    .nav{
+        padding: 0 2rem;
+    }
+    .sub-container-1 ul{
+        display: none;
+    }
+    .container-1{
+        display: none;
+    }
+}
+
+/* For small devices */
+@media screen and (max-width: 320px) {}
